@@ -13,6 +13,6 @@ Test Setup      Open chrome
 Test Teardown   Close chrome
 
 *** Test Cases ***
-Scenario: Open outlook web page
-    Given that the User see Login
+Scenario: Open website juliodelima
+    Given that the User see SignIn
     

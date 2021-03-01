@@ -3,13 +3,13 @@
 Library         SeleniumLibrary
 
 *** Variables ***
-${OUTLOOK_WEBPAGE}          https://outlook.office365.com/
+${WEBPAGEJULIO}          http://www.juliodelima.com.br/taskit/
 ${BROWSER}                  chrome
 
 *** Keywords ***
 ### Setup e TearDow ###
 Open chrome
-    Open Browser            ${OUTLOOK_WEBPAGE}      chrome
+    Open Browser            ${WEBPAGEJULIO}      chrome
     
 Close chrome
     Close Browser
