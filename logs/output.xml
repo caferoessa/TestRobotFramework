@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210301 14:26:11.317" rpa="false">
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210301 20:17:34.960" rpa="false">
 <suite id="s1" name="Teste" source="C:\Users\crodsant\Desktop\TestRobotFramework\test\teste.robot">
 <test id="s1-t1" name="Scenario: Buy a product">
 <kw name="Open chrome" library="web_resource" type="setup">
@@ -9,10 +9,10 @@
 <arg>${WEBPAGE}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20210301 14:26:11.737" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20210301 14:26:11.737" endtime="20210301 14:26:39.974"></status>
+<msg timestamp="20210301 20:17:35.367" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210301 20:17:35.366" endtime="20210301 20:18:04.678"></status>
 </kw>
-<status status="PASS" starttime="20210301 14:26:11.737" endtime="20210301 14:26:39.975"></status>
+<status status="PASS" starttime="20210301 20:17:35.366" endtime="20210301 20:18:04.678"></status>
 </kw>
 <kw name="Given that the User see a product" library="web_resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -20,7 +20,7 @@
 <arguments>
 <arg>${SEARCHPAGE}</arg>
 </arguments>
-<status status="PASS" starttime="20210301 14:26:39.976" endtime="20210301 14:26:40.015"></status>
+<status status="PASS" starttime="20210301 20:18:04.689" endtime="20210301 20:18:04.800"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -28,69 +28,198 @@
 <arg>name=search_query</arg>
 <arg>${PRODUTO}</arg>
 </arguments>
-<msg timestamp="20210301 14:26:40.015" level="INFO">Typing text 'blouse' into text field 'name=search_query'.</msg>
-<status status="PASS" starttime="20210301 14:26:40.015" endtime="20210301 14:26:40.138"></status>
+<msg timestamp="20210301 20:18:04.801" level="INFO">Typing text 'blouse' into text field 'name=search_query'.</msg>
+<status status="PASS" starttime="20210301 20:18:04.800" endtime="20210301 20:18:05.323"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>name=submit_search</arg>
 </arguments>
-<msg timestamp="20210301 14:26:40.138" level="INFO">Clicking element 'name=submit_search'.</msg>
-<status status="PASS" starttime="20210301 14:26:40.138" endtime="20210301 14:26:44.699"></status>
+<msg timestamp="20210301 20:18:05.324" level="INFO">Clicking element 'name=submit_search'.</msg>
+<status status="PASS" starttime="20210301 20:18:05.323" endtime="20210301 20:18:07.582"></status>
 </kw>
-<status status="PASS" starttime="20210301 14:26:39.975" endtime="20210301 14:26:44.699"></status>
+<status status="PASS" starttime="20210301 20:18:04.688" endtime="20210301 20:18:07.582"></status>
 </kw>
-<kw name="When open the page" library="web_resource">
+<kw name="When open the page and add the product in cart and proceed to checkout" library="web_resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>css=#center_column &gt; h1</arg>
 </arguments>
-<status status="PASS" starttime="20210301 14:26:44.700" endtime="20210301 14:26:44.741"></status>
+<status status="PASS" starttime="20210301 20:18:07.583" endtime="20210301 20:18:07.656"></status>
 </kw>
-<status status="PASS" starttime="20210301 14:26:44.699" endtime="20210301 14:26:44.741"></status>
-</kw>
-<kw name="And add to product in cart" library="web_resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]</arg>
 </arguments>
-<msg timestamp="20210301 14:26:44.742" level="INFO">Clicking element 'xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]'.</msg>
-<status status="PASS" starttime="20210301 14:26:44.742" endtime="20210301 14:26:44.823"></status>
+<msg timestamp="20210301 20:18:07.656" level="INFO">Clicking element 'xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]'.</msg>
+<status status="PASS" starttime="20210301 20:18:07.656" endtime="20210301 20:18:07.784"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="layer_cart"]/div[1]/div[1]/h2/i[@class="icon-ok"]</arg>
 </arguments>
-<status status="PASS" starttime="20210301 14:26:44.823" endtime="20210301 14:26:45.734"></status>
+<status status="PASS" starttime="20210301 20:18:07.785" endtime="20210301 20:18:09.049"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a</arg>
 </arguments>
-<msg timestamp="20210301 14:26:45.734" level="INFO">Clicking link 'xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a'.</msg>
-<status status="PASS" starttime="20210301 14:26:45.734" endtime="20210301 14:26:47.201"></status>
+<msg timestamp="20210301 20:18:09.050" level="INFO">Clicking link 'xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a'.</msg>
+<status status="PASS" starttime="20210301 20:18:09.049" endtime="20210301 20:18:11.013"></status>
 </kw>
-<status status="PASS" starttime="20210301 14:26:44.742" endtime="20210301 14:26:47.202"></status>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]</arg>
+</arguments>
+<status status="PASS" starttime="20210301 20:18:11.014" endtime="20210301 20:18:11.124"></status>
 </kw>
-<status status="PASS" starttime="20210301 14:26:11.736" endtime="20210301 14:26:47.202" critical="yes"></status>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]</arg>
+</arguments>
+<msg timestamp="20210301 20:18:11.124" level="INFO">Clicking element 'xpath=/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]'.</msg>
+<status status="PASS" starttime="20210301 20:18:11.124" endtime="20210301 20:18:14.554"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#login_form &gt; h3</arg>
+</arguments>
+<status status="PASS" starttime="20210301 20:18:14.554" endtime="20210301 20:18:14.590"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=email</arg>
+<arg>${USUARIO}</arg>
+</arguments>
+<msg timestamp="20210301 20:18:14.590" level="INFO">Typing text 'teste@test.net' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20210301 20:18:14.590" endtime="20210301 20:18:14.865"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=passwd</arg>
+<arg>${SENHA}</arg>
+</arguments>
+<msg timestamp="20210301 20:18:14.866" level="INFO">Typing text '123456' into text field 'id=passwd'.</msg>
+<status status="PASS" starttime="20210301 20:18:14.866" endtime="20210301 20:18:15.020"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=SubmitLogin</arg>
+</arguments>
+<msg timestamp="20210301 20:18:15.021" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20210301 20:18:15.020" endtime="20210301 20:18:17.103"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#center_column &gt; h1</arg>
+</arguments>
+<status status="PASS" starttime="20210301 20:18:17.103" endtime="20210301 20:18:17.147"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]/form/p/button</arg>
+</arguments>
+<msg timestamp="20210301 20:18:17.148" level="INFO">Clicking element 'xpath=//*[@id="center_column"]/form/p/button'.</msg>
+<status status="PASS" starttime="20210301 20:18:17.148" endtime="20210301 20:18:18.608"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#carrier_area &gt; h1</arg>
+</arguments>
+<status status="PASS" starttime="20210301 20:18:18.608" endtime="20210301 20:18:18.648"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>id=cgv</arg>
+</arguments>
+<msg timestamp="20210301 20:18:18.648" level="INFO">Clicking element 'id=cgv'.</msg>
+<status status="PASS" starttime="20210301 20:18:18.648" endtime="20210301 20:18:18.782"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>name=processCarrier</arg>
+</arguments>
+<msg timestamp="20210301 20:18:18.782" level="INFO">Clicking element 'name=processCarrier'.</msg>
+<status status="PASS" starttime="20210301 20:18:18.782" endtime="20210301 20:18:20.243"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>css=#center_column &gt; h1</arg>
+</arguments>
+<status status="PASS" starttime="20210301 20:18:20.244" endtime="20210301 20:18:20.274"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a</arg>
+</arguments>
+<msg timestamp="20210301 20:18:20.275" level="INFO">Clicking element 'xpath=//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a'.</msg>
+<status status="PASS" starttime="20210301 20:18:20.274" endtime="20210301 20:18:22.159"></status>
+</kw>
+<status status="PASS" starttime="20210301 20:18:07.583" endtime="20210301 20:18:22.159"></status>
+</kw>
+<kw name="Then buy the product" library="web_resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="cart_navigation"]/button</arg>
+</arguments>
+<msg timestamp="20210301 20:18:22.160" level="INFO">Clicking element 'xpath=//*[@id="cart_navigation"]/button'.</msg>
+<status status="PASS" starttime="20210301 20:18:22.160" endtime="20210301 20:18:26.704"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]/div/p/strong</arg>
+</arguments>
+<status status="PASS" starttime="20210301 20:18:26.704" endtime="20210301 20:18:26.740"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>xpath=//*[@id="center_column"]/div/p/strong</arg>
+<arg>Your order on My Store is complete.</arg>
+</arguments>
+<msg timestamp="20210301 20:18:26.740" level="INFO">Verifying element 'xpath=//*[@id="center_column"]/div/p/strong' contains exact text 'Your order on My Store is complete.'.</msg>
+<status status="PASS" starttime="20210301 20:18:26.740" endtime="20210301 20:18:26.776"></status>
+</kw>
+<kw name="Close chrome">
+<msg timestamp="20210301 20:18:26.782" level="FAIL">No keyword with name 'Close chrome' found.</msg>
+<status status="FAIL" starttime="20210301 20:18:26.781" endtime="20210301 20:18:26.782"></status>
+</kw>
+<status status="FAIL" starttime="20210301 20:18:22.159" endtime="20210301 20:18:26.782"></status>
+</kw>
+<status status="FAIL" starttime="20210301 20:17:35.365" endtime="20210301 20:18:26.783" critical="yes">No keyword with name 'Close chrome' found.</status>
 </test>
 <doc>Template file for Web scenarios.</doc>
-<status status="PASS" starttime="20210301 14:26:11.320" endtime="20210301 14:26:47.204"></status>
+<status status="FAIL" starttime="20210301 20:17:34.965" endtime="20210301 20:18:26.784"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Teste">Teste</stat>
+<stat pass="0" fail="1" id="s1" name="Teste">Teste</stat>
 </suite>
 </statistics>
 <errors>
