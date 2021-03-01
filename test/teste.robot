@@ -10,9 +10,11 @@ Resource        ../resources/web_resource.robot
 ###[Setup] or [Teardown]: ignora os da suite. adicionado direto no teste para rodar especificamente para este
 
 Test Setup      Open chrome
-Test Teardown   Close chrome
+#Test Teardown   Close chrome  (RETIRADO MOMENTANEAMENTE)
 
 *** Test Cases ***
-Scenario: Open outlook web page
-    Given that the User see Login
-    
+Scenario: Buy a product
+    Given that the User see a product
+    When open the page 
+    And add to product in cart
+    #Then buy the product
