@@ -16,5 +16,5 @@ Test Setup      Open chrome
 Scenario: Buy a product
     Given that the User see a product
     When open the page 
-    And add to product in cart
-    #Then buy the product
+    And add to product in cart and proceed to checkout
+   #Then buy the product
