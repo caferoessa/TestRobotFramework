@@ -23,10 +23,9 @@ that the User see a product
     Input Text                           name=search_query            ${PRODUTO}
     Click Element                        name=submit_search
 
-open the page 
+open the page and add the product in cart and proceed to checkout
     Wait Until Element Is Visible        css=#center_column > h1  
     
-add to product in cart and proceed to checkout 
     #Clicar em "ADD TO CART" no produto.
     Click Element                        xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]
    
@@ -65,5 +64,5 @@ buy the product
     Element Text Should Be         xpath=//*[@id="center_column"]/div/p/strong        Your order on My Store is complete.
     
 
-    #Close chrome
-        #Close Browser
+    Close chrome
+        Close Browser
