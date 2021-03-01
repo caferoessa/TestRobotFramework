@@ -1,3 +1,11 @@
+# FOR the projetc TEST ROBOT FRAMEWORK
+# LOG FILES
+.html
+.xml
+
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
