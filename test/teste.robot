@@ -10,7 +10,7 @@ Resource        ../resources/web_resource.robot
 ###[Setup] or [Teardown]: ignora os da suite. adicionado direto no teste para rodar especificamente para este
 
 Test Setup      Open chrome
-#Test Teardown   Close chrome  (RETIRADO MOMENTANEAMENTE)
+#Test Teardown   Close chrome 
 
 *** Test Cases ***
 Scenario: Buy a product

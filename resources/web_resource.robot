@@ -64,5 +64,6 @@ buy the product
     Element Text Should Be         xpath=//*[@id="center_column"]/div/p/strong        Your order on My Store is complete.
     
 
-    Close chrome
-        Close Browser
+#Close chrome
+    #Close chrome
+    
