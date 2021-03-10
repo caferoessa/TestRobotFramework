@@ -10,10 +10,13 @@ Resource        ../resources/web_resource.robot
 ###[Setup] or [Teardown]: ignora os da suite. adicionado direto no teste para rodar especificamente para este
 
 Test Setup      Open chrome
-#Test Teardown   Close chrome  (RETIRADO MOMENTANEAMENTE)
+#Test Teardown   Close chrome 
 
 *** Test Cases ***
-Scenario: Buy a product
-    Given that the User see a product
-    When open the page and add the product in cart and proceed to checkout
-    Then buy the product
+
+Scenario: Buy a product in web shop
+    Given I am in the home screen page
+    When I select a product
+    And add product to cart
+    And proceed to checkout
+    Then I can finish the order

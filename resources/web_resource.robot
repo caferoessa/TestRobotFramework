@@ -18,17 +18,19 @@ Open chrome
     Open Browser                        ${WEBPAGE}                    chrome
 
 
-that the User see a product
+I am in the home screen page
     Wait Until Element Is Visible        ${SEARCHPAGE}
     Input Text                           name=search_query            ${PRODUTO}
     Click Element                        name=submit_search
 
-open the page and add the product in cart and proceed to checkout
+I select a product
     Wait Until Element Is Visible        css=#center_column > h1  
     
+add product to cart   
     #Clicar em "ADD TO CART" no produto.
     Click Element                        xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]
    
+proceed to checkout
     #SUMMARY   
     Wait Until Element Is Visible        xpath=//*[@id="layer_cart"]/div[1]/div[1]/h2/i[@class="icon-ok"]
     Click Link                            xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a
@@ -55,7 +57,7 @@ open the page and add the product in cart and proceed to checkout
     Click Element                        xpath=//*[@id="HOOK_PAYMENT"]/div[1]/div/p/a
     
 
-buy the product  
+I can finish the order
     #Confirm Order
     Click Element                        xpath=//*[@id="cart_navigation"]/button
       
@@ -64,5 +66,6 @@ buy the product
     Element Text Should Be         xpath=//*[@id="center_column"]/div/p/strong        Your order on My Store is complete.
     
 
-    Close chrome
-        Close Browser
+#Close chrome
+    #Close chrome
+    
