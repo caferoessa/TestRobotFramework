@@ -45,7 +45,7 @@ robotframework-seleniumlibrary
 robotframework-sshlibrary
 
 
-RUN in TERMINAL:             robot -d .\logs .\test\teste.robot
+RUN in TERMINAL:  robot -d .\logs .\test\teste.robot
 
 
-## Thanks for believing in me !! - Carlos Santo
+# tks
